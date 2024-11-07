@@ -43,21 +43,22 @@ function loadWidget(config) {
                 }
             }
         }
-        const text = `欢迎阅读<span>「${document.title.split(" - ")[0]}」</span>`;
+        // const text = `欢迎阅读<span>「${document.title.split(" - ")[0]}」</span>`;
+        const text = `just landed at「${document.title.split(" - ")[0]}」</span> `;
         let from;
         if (document.referrer !== "") {
             const referrer = new URL(document.referrer),
                 domain = referrer.hostname.split(".")[1];
             const domains = {
-                "baidu": "百度",
-                "so": "360搜索",
-                "google": "谷歌搜索"
+              "baidu": "Baidu",
+              "so": "360 Search",
+              "google": "Google Search"
             };
             if (location.hostname === referrer.hostname) return text;
 
             if (domain in domains) from = domains[domain];
             else from = referrer.hostname;
-            return `Hello！来自 <span>${from}</span> 的朋友<br>${text}`;
+            return `Hello! Friend from <span>${from}</span><br>${text}`;
         }
         return text;
     }
@@ -149,8 +150,8 @@ function initWidget(config, apiPath) {
         };
     }
     document.body.insertAdjacentHTML("beforeend", `<div id="waifu-toggle">
-            <span>看板娘</span>
-        </div>`);
+        <span>Live2D Widget</span>
+      </div>`);
     const toggle = document.getElementById("waifu-toggle");
     toggle.addEventListener("click", () => {
         toggle.classList.remove("waifu-toggle-active");
