@@ -24,7 +24,7 @@ Here are the three models I've used:
 
 ## Usage
 
-Append the CDN link ```<script src="https://cdn.jsdelivr.net/gh/brandonkylely/l2d-widget@master/autoload.js"></script>``` to the end of your index.html file if you would like to use my version. Otherwise, see below.
+Append the CDN link ```<script src="https://fastly.jsdelivr.net/gh/brandonkylely/l2d-widget@latest/autoload.js"></script>``` to the end of your index.html file if you would like to use my version. Otherwise, see below.
 
 ## Customization
 
